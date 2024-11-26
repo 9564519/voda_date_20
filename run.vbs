@@ -1,12 +1,9 @@
 Set objShell = CreateObject("WScript.Shell")
-
-' Получаем путь к исполняющему файлу vbs
+' РџРѕР»СѓС‡Р°РµРј РїСѓС‚СЊ Рє РёСЃРїРѕР»РЅСЏСЋС‰РµРјСѓ С„Р°Р№Р»Сѓ vbs
 strScriptPath = WScript.ScriptFullName
 arrPath = Split(strScriptPath, "\")
 strParentFolder = Replace(strScriptPath, arrPath(UBound(arrPath)), "")
-
-' Формируем полный путь к exe файлу
+' Р¤РѕСЂРјРёСЂСѓРµРј РїРѕР»РЅС‹Р№ РїСѓС‚СЊ Рє exe С„Р°Р№Р»Сѓ
 strCommand = strParentFolder & "date_20_4.exe"
-
-' Запускаем exe файл
+' Р—Р°РїСѓСЃРєР°РµРј exe С„Р°Р№Р»
 objShell.Run strCommand, 0, True
